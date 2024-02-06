@@ -9,6 +9,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import Snowfall from "react-snowfall";
+
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
@@ -22,7 +24,8 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body style={{ background: "black", color: "white" }}>
+        <Snowfall />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
